@@ -1,6 +1,5 @@
 add_executable(minidrive_server
-    src/main.cpp
-    src/simple_server.cpp
+    src/server_main.cpp
 )
 
 target_include_directories(minidrive_server
@@ -12,6 +11,7 @@ target_link_libraries(minidrive_server
     PRIVATE
         minidrive_shared
         minidrive_warnings
+        pthread
 )
 
 set_target_properties(minidrive_server PROPERTIES OUTPUT_NAME server)

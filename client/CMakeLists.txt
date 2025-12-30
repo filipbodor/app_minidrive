@@ -1,5 +1,5 @@
 add_executable(minidrive_client
-    src/main.cpp
+    src/client_main.cpp
 )
 
 target_include_directories(minidrive_client
@@ -11,6 +11,7 @@ target_link_libraries(minidrive_client
     PRIVATE
         minidrive_shared
         minidrive_warnings
+        pthread
 )
 
 set_target_properties(minidrive_client PROPERTIES OUTPUT_NAME client)
